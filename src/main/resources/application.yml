@@ -31,6 +31,15 @@ spring:
           destination: phoneseller
           contentType: application/json
 
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 610
+
 logging:
   level:
     org.hibernate.type: trace
@@ -40,7 +49,7 @@ server:
 
 api:
   url:
-    promotion: http://localhost:8086
+    marketing: http://localhost:8086
 ---
 
 spring:
@@ -67,6 +76,15 @@ spring:
           destination: phoneseller
           contentType: application/json
 
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 610
+
 api:
   url:
-    promotion: http://promotion:8080
+    marketing: ${configurl}

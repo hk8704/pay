@@ -1,13 +1,13 @@
 phoneseller\PaymentController.class
 phoneseller\Payment.class
+phoneseller\external\MarketingService.class
 phoneseller\AbstractEvent$1.class
 phoneseller\PaymentRepository.class
 phoneseller\config\kafka\KafkaProcessor.class
 phoneseller\OrderCancelled.class
 phoneseller\AbstractEvent.class
-phoneseller\external\Promotion.class
+phoneseller\external\Marketing.class
 phoneseller\PolicyHandler.class
-phoneseller\external\PromotionService.class
 phoneseller\PayApplication.class
 phoneseller\PayCompleted.class
 phoneseller\PayCancelled.class

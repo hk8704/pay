@@ -45,13 +45,13 @@ public class Payment {
             //Following code causes dependency to external APIs
             // it is NOT A GOOD PRACTICE. instead, Event-Policy mapping is recommended.
             System.out.println("***** BEFORE EXTERNAL *****");
-            phoneseller.external.Promotion promotion = new phoneseller.external.Promotion();
-            promotion.setOrderId(getOrderId());
-            promotion.setPoint((double)-1);
-            promotion.setProcess("PayCancelled");
+            phoneseller.external.Marketing marketing = new phoneseller.external.Marketing();
+            marketing.setOrderId(getOrderId());
+            marketing.setPoint((double)0);
+            marketing.setProcess("PayCancelled");
             // mappings goes here
-            PayApplication.applicationContext.getBean(phoneseller.external.PromotionService.class)
-                    .payCancel(promotion);
+            PayApplication.applicationContext.getBean(phoneseller.external.MarketingService.class)
+                    .payCancel(marketing);
 
             System.out.println("***** 결재 취소 완료 *****");
         }
